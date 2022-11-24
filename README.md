@@ -16,6 +16,6 @@ The project currently has:
 
 - Name
 - Description
-- Location
+- Location (stored as a string for now)
 - Tags
 - Link
