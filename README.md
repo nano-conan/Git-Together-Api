@@ -19,3 +19,17 @@ The project currently has:
 - Location (stored as a string for now)
 - Tags
 - Link
+
+## Endpoints
+
+For endpoints:
+
+GET /api/projects       Returns a JSON array of all the projects (protected)
+
+GET /api/projects/{id}  Returns a JSON object of the specified project
+
+DEL /api/projects/{id}  Deletes the specified project
+
+POST /api/projects      Creates a project
+
+PUT /api/project/{id}   Updates the specified project
