@@ -24,6 +24,17 @@ The project currently has:
 
 For endpoints:
 
+Login Endpoints
+
+POST /api/login         Returns a session token if authenticated
+
+POST /api/register      Returns a session token if successfully registered
+
+POST /api/logout        Revokes all session tokens tied to your account
+
+
+Project Endpoints
+
 GET /api/projects       Returns a JSON array of all the projects (protected)
 
 GET /api/projects/{id}  Returns a JSON object of the specified project
