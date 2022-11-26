@@ -42,6 +42,7 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::post('/projects', [ProjectController::class, 'store']);
     Route::put('/projects/{id}', [ProjectController::class, 'update']);
     Route::delete('/projects/{id}', [ProjectController::class, 'destroy']);
-    Route::post('/logout', [AuthController::class, 'logout']);
     */
+
+    Route::post('/logout', [AuthController::class, 'logout']);
 });
