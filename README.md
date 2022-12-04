@@ -159,3 +159,17 @@ Body:
 'skills' : '{{ SKILLS }}' 
 'location' : '{{ LOCATION }}' 
 ```
+
+PUT /api/profile/{id}
+
+ ```
+Headers: 
+'Accept' : 'application/json' 
+'Authorization' : 'Bearer {{ TOKEN }}' 
+ 
+Body: 
+'name' : '{{ NAME }}' 
+'bio' : '{{ BIO }}' 
+'skills' : '{{ SKILLS }}' 
+'location' : '{{ LOCATION }}' 
+```
