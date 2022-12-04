@@ -28,6 +28,13 @@ class ProfileController extends Controller
     public function store(Request $request)
     {
         //
+
+        $request->validate([
+            'name' => 'required',
+            'bio' => 'required',
+            'skills' => 'required',
+            'location' => 'requried'
+        ]);
     }
 
     /**
