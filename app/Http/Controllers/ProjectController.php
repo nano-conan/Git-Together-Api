@@ -30,8 +30,11 @@ class ProjectController extends Controller
             'location' => 'required'
         ]);
 
-        Project::create($request->all());
+        $project = Project::create($request->all());
+        $project->hash = md5($project->id." ".$project->name);
+        $project->save();
 
+        return $project;
     }
 
     /**
@@ -79,6 +82,11 @@ class ProjectController extends Controller
      */
     public function search($name)
     {
-        return Project::where('name', 'like', '%'.$name.'%')->get();
+        $name = Project::where('name', 'like', '%'.$name.'%')->get();
+        $uid = Project::where('users', 'like', '%'.$name.'%')->get();
+        $hash = Project::where('hash', $name)->get();
+
+        $collection = $name->merge($uid)->merge($hash);
+        return $collection;
     }
 }
