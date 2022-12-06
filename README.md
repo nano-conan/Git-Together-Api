@@ -48,6 +48,8 @@ Body:
 'email' : '{{ EMAIL }}'
 'password' : '{{ PASSWORD }}'
 'password_confirmation' : '{{ PASSWORD }}'
+'bio' : '{{ BIO }}'     //Bio is optional
+'location' : {{ LOCATION }}'        //Location is optional
 ```
 
 -----
@@ -100,7 +102,8 @@ Body:
 'description' : '{{ PROJECT_DESCRIPTION }}'             // Description is optional 
 'location' : '{{ PROJECT_LOCATION }}' 
 'tags' : '{{ TAGS }}'                                   // Tags optional 
-'link' : '{{ LINK }}'                                   // Link optional 
+'link' : '{{ LINK }}'                                   // Link optional
+'users' : '{{ USERS }}'                                 // Users is optional, if null, it will put only the creating users id
  ```
  
  -----
@@ -172,4 +175,5 @@ Body:
 'bio' : '{{ BIO }}' 
 'skills' : '{{ SKILLS }}' 
 'location' : '{{ LOCATION }}' 
+'users' : '{{ USERS }}'
 ```
