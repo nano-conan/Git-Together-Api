@@ -31,8 +31,14 @@ class ProjectController extends Controller
         ]);
 
         $project = Project::create($request->all());
-        $project->hash = md5($project->id." ".$project->name);
-        $project->save();
+
+	$project->hash = md5($project->id." ".$project->name);
+
+	$user = auth()->user
+	$project->users = $project->users.$user->id
+
+	$project->save();
+
 
         return $project;
     }

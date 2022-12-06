@@ -19,7 +19,10 @@ return new class extends Migration
             $table->string('description')->nullable();
             $table->string('location');
             $table->string('tags')->nullable();
-            $table->string('link')->nullable();
+	    $table->string('link')->nullable();
+	    $table->string('users')->nullable();
+	    $table->string('hash')->nullable();
+
             $table->timestamps();
         });
     }
